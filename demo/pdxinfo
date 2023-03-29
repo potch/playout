@@ -1,0 +1,6 @@
+name=playout
+author=Twenty Minute Mile
+bundleID=com.twentyminutemile.playout
+version=0.1
+buildNumber=897
+imagePath=launch
