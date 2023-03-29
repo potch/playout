@@ -6,7 +6,20 @@ UI library and box model for Playdate
 
 ## Demo
 
-You can run the demo by doing `npm install` then `npm start` (if you have node available) or by running `pdc demo`, then opening the resulting package in the Playdate Simulator.
+If you'd like to run the demo, you'll need the Playdate SDK. Then run:
+```sh
+pdc demo
+```
+and open the resulting packaged in the Playdate Simulator.
+
+If you want to develop/experiment on the library or demo and you have `node` installed you can run the following:
+
+```
+npm install
+npm start
+```
+
+Which will build and launch the demo, and re-build after any changes.
 
 # API Docs
 
