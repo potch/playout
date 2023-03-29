@@ -4,7 +4,7 @@ UI library and box model for Playdate
 
 ## Demo
 
-You can run the demo by doing `npm install` then `npm start` (if you have node available) or by running `pdc demo` then opening the resulting package in the Playdate Simulator
+You can run the demo by doing `npm install` then `npm start` (if you have node available) or by running `pdc demo` then opening the resulting package in the Playdate Simulator.
 
 # API Docs
 
@@ -37,7 +37,7 @@ font | font to use when drawing text in children. | `nil` (default)
 fontFamily | font family to use when drawing text in children. takes precedence over `font`, and allows for rich formatting. | `nil`
 hAlign | how to horizontally align children. see [Alignment](#alignment) | `playout.kAlignCenter`
 height | height of the box. if not specified, box will be the height of its contents plus padding, spacing, etc. (but no larger than `maxHeight`) | `nil`
-id | unique `string` used for lookups via [`playout.tree.get`](#playouttreegetid) | nil
+id | unique `string` used for lookups via [`playout.tree.get`](#playout-tree-get-id) | nil
 maxHeight | maximum height of the box | 240
 maxWidth | maximum width of the box | 400
 minHeight | minimum height of the box | 1
