@@ -4,6 +4,16 @@ UI library and box model for Playdate
 
 [Support this project on Itch.io 🕹](https://twentyminutemile.itch.io/playout)
 
+## Installation
+
+If you are using [toybox](https://github.com/jm/toybox), you can run
+
+```
+toybox add potch/playout
+```
+
+Otherwise the library is a single file you can clone/copy into your project.
+
 ## Demo
 
 If you'd like to run the demo, you'll need the Playdate SDK. Then run:
