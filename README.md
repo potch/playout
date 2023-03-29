@@ -2,9 +2,11 @@
 
 UI library and box model for Playdate
 
+[Support this project on Itch.io](https://twentyminutemile.itch.io/playout)
+
 ## Demo
 
-You can run the demo by doing `npm install` then `npm start` (if you have node available) or by running `pdc demo` then opening the resulting package in the Playdate Simulator.
+You can run the demo by doing `npm install` then `npm start` (if you have node available) or by running `pdc demo`, then opening the resulting package in the Playdate Simulator.
 
 # API Docs
 
