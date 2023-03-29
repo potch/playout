@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A UI layout library for Playdate",
   "scripts": {
-    "start": "onchange -ik 'src/**/*' 'demo/**/*' -e 'src/pdxinfo' -- run-s build preview",
+    "start": "onchange -ik 'playout.lua' 'demo/**/*' -e 'src/pdxinfo' -- run-s build preview",
     "build": "pdc demo playout.pdx",
     "preview": "open -g playout.pdx"
   },

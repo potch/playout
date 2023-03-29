@@ -7,7 +7,7 @@ import "CoreLibs/timer"
 local gfx <const> = playdate.graphics
 
 -- local libs
-import "../src/playout.lua"
+import "../playout.lua"
 import "test"
 
 fonts = {
