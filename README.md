@@ -2,7 +2,7 @@
 
 UI library and box model for Playdate
 
-[Support this project on Itch.io](https://twentyminutemile.itch.io/playout)
+[Support this project on Itch.io 🕹](https://twentyminutemile.itch.io/playout)
 
 ## Demo
 
