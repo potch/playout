@@ -53,7 +53,11 @@ Returns a `playout.box`.
 | -------- | ----------- | ------------- |
 backgroundAlpha | opacity of box fill, drawn as a dither pattern. | 0 (full)
 backgroundColor | color to fill the box when drawing | `nil` (transparent)
-border | thickness of border on box | 0
+border | thickness of border on box, if this is set it will override the individual sides | 0
+borderLeft | thickness of the left border on box | 0
+borderRight | thickness of the right border on box | 0
+borderTop | thickness of the top border on box | 0
+borderBottom | thickness of the bottom border on box | 0
 borderColor | color of border (if > 0) | `playdate.graphics.kColorBlack`
 borderRadius | corner radius to use when drawing the box | 0
 direction | direction of layout. can be horizontal (children will be in a row) or vertical (children will be in a column) | `playout.kDirectionVertical`
