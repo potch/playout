@@ -86,6 +86,10 @@ local defaultBoxProperties = {
   vAlign = kAlignCenter,
   selfAlign = nil,
   border = 0,
+  borderLeft = 0,
+  borderRight = 0,
+  borderTop = 0,
+  borderBottom = 0,
   borderColor = gfx.kColorBlack,
   borderRadius = 0,
   spacing = 0,
@@ -215,7 +219,8 @@ function box:layout(context)
     if isVertical and totalFlex > 0 then
       actualHeight = constrainedHeight
     else
-      actualHeight = math.max(props.minHeight, math.min(intrinsicHeight + paddingTop + paddingBottom + shadow, props.maxHeight))
+      actualHeight = math.max(props.minHeight,
+        math.min(intrinsicHeight + paddingTop + paddingBottom + shadow, props.maxHeight))
       remainingHeight = 0
     end
   end
@@ -338,6 +343,44 @@ function box:draw(rect)
       gfx.drawRoundRect(r.x, r.y, r.width, r.height - props.shadow, props.borderRadius)
     else
       gfx.drawRoundRect(r, props.borderRadius)
+    end
+  elseif props.borderLeft > 0 or props.borderRight > 0 or props.borderTop > 0 or props.borderBottom > 0 then
+    gfx.setColor(props.borderColor)
+    if props.borderLeft > 0 then
+      gfx.setLineWidth(props.borderLeft)
+      gfx.drawLine(
+        r.x,
+        r.y - props.borderTop / 2,
+        r.x,
+        r.y + r.height + props.borderBottom / 2
+      )
+    end
+    if props.borderRight > 0 then
+      gfx.setLineWidth(props.borderRight)
+      gfx.drawLine(
+        r.x + r.width,
+        r.y - props.borderTop / 2,
+        r.x + r.width,
+        r.y + r.height + props.borderBottom / 2
+      )
+    end
+    if props.borderTop > 0 then
+      gfx.setLineWidth(props.borderTop)
+      gfx.drawLine(
+        r.x - props.borderLeft / 2,
+        r.y,
+        r.x + r.width + props.borderRight / 2,
+        r.y
+      )
+    end
+    if props.borderBottom > 0 then
+      gfx.setLineWidth(props.borderBottom)
+      gfx.drawLine(
+        r.x - props.borderLeft / 2,
+        r.y + r.height,
+        r.x + r.width + props.borderRight / 2,
+        r.y + r.height
+      )
     end
   end
 
@@ -594,7 +637,7 @@ function tree:computeTabIndex(id)
   end
 
   walk(self.root)
-  
+
   table.sort(tabIndex, function(a, b)
     return a.properties.tabIndex < b.properties.tabIndex
   end)
