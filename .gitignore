@@ -28,3 +28,6 @@ node_modules/
 # Compiled Playdate games
 *.pdx
 *.pdx.zip
+
+demo/fonts
+demo/images
