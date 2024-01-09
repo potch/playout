@@ -289,7 +289,7 @@ Children are aligned to the start of the box (left for `hAlign`, top for `vAlign
 
 Children are aligned to the center of the box (rounded down in the case of an odd width).
 
-### `playout.kAlignStart`
+### `playout.kAlignEnd`
 
 Children are aligned to the end of the box (right for `hAlign`, bottom for `vAlign`).
 
